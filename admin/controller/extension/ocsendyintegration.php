@@ -4,7 +4,7 @@ class ControllerExtensionocsendyintegration extends Controller {
 
 	private $strings = array('lang_sync_date','lang_sync_email','lang_no_syncs','lang_checking_version','lang_getting_messages','lang_configure_sendy_desc','lang_configure_sendy',
 							'lang_form_submission_errors','lang_save_sendy_params','lang_sendy_list_id','lang_sendy_endpoint',
-                            'lang_read_more_msg','lang_remote_ip');
+                            'lang_read_more_msg','lang_remote_ip','lang_sendy_response');
 
 
 	/**

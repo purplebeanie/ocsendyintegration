@@ -19,6 +19,7 @@ $_['lang_sendy_list_id'] = "Your Sendy List ID";
 $_['lang_sync_date'] 		= 'Date Added';
 $_['lang_sync_email'] = 'Email Address';
 $_['lang_remote_ip'] = 'Signup IP Address';
+$_['lang_sendy_response'] = 'Sendy Response';
 $_['lang_no_syncs'] = 'No Results';
 $_['lang_checking_version'] = 'Checking Version...';
 $_['lang_getting_messages'] = 'Getting Messages...';

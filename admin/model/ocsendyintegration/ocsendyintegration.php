@@ -20,7 +20,7 @@ class Modelocsendyintegrationocsendyintegration extends Model
 
   public function verify_dbase()
   {
-  	$this->db->query('create table if not exists `'.DB_PREFIX.'ocsendyintegration` (`dateadded` date not null default "0000-00-00", `email` varchar(256) not null,`ip` varchar(256) not null)');
+  	$this->db->query('create table if not exists `'.DB_PREFIX.'ocsendyintegration` (`dateadded` date not null default "0000-00-00", `email` varchar(256) not null,`ip` varchar(256) not null,`result` varchar(512) not null)');
   }
 
 

@@ -27,9 +27,11 @@
                 <table class="list">
                     <thead>
                     <tr>
-                        <td class="left" width="20%"><?php echo $lang_sync_date;?></td>
-                        <td class="center" width="40%"><?php echo $lang_sync_email; ?></td>
-                        <td class="left" width="40%"><?php echo $lang_remote_ip;?></td>
+                        <td class="left" width="10%"><?php echo $lang_sync_date;?></td>
+                        <td class="center" width="20%"><?php echo $lang_sync_email; ?></td>
+                        <td class="left" width="30%"><?php echo $lang_remote_ip;?></td>
+                        <td class="left" width="40%"><?php echo $lang_sendy_response;?></td>
+
                     </tr>
                     </thead>
                     <tbody>
@@ -39,11 +41,12 @@
                         <td class="left"><?php echo $updates['dateadded']; ?></td>
                         <td class="center"><?php echo $updates['email'] ?></td>
                         <td class="left"><?php echo $updates['ip'];?></td>
+                        <td class="left"><?php echo $updates['result'];?></td>
                     </tr>
                     <?php } ?>
                     <?php } else { ?>
                     <tr>
-                        <td class="center" colspan="3"><?php echo $lang_no_syncs; ?></td>
+                        <td class="center" colspan="4"><?php echo $lang_no_syncs; ?></td>
                     </tr>
                     <?php } ?>
                     </tbody>
