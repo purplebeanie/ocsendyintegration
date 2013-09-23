@@ -25,4 +25,16 @@
 			<add><![CDATA[        <li><a href="<?php echo $ocsendyintegration; ?>"><?php echo $text_ocsendyintegration; ?></a></li>]]></add>
 		</operation>
 	</file>
+	<file name="catalog/controller/account/register.php">
+		<operation>
+			<search position="after"><![CDATA[$this->model_account_customer->addCustomer($this->request->post);]]></search>
+			<add><![CDATA[include_once(DIR_APPLICATION."model/ocsendyintegration/ocsendyintegration.php");$this->load->model('ocsendyintegration/ocsendyintegration');$this->model_ocsendyintegration_ocsendyintegration->add_to_sendy($this->request->post);]]>
+			</add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[public function index() {]]></search>
+			<add><![CDATA[include_once(DIR_APPLICATION."model/ocsendyintegration/ocsendyintegration.php");Modelocsendyintegrationocsendyintegration::test();]]>
+			</add>
+		</operation>
+	</file>
 </modification>
