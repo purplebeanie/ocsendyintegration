@@ -1,28 +1,28 @@
 <modification>
-	<id>Open Cart Stock Synch Tool</id>
+	<id>Open Cart Sendy Integration</id>
 	<version>1.5.x</version>
 	<vqmver>2.4.0</vqmver>
 	<author>Eric Fernance</author>
 	<file name="admin/controller/common/header.php">
 		<operation>
-			<search position="after"><![CDATA[$this->data['text_backup'] = $this->language->get('text_backup');]]></search>
-			<add><![CDATA[		$this->data['text_ocstocksync'] = $this->language->get('text_ocstocksync');]]></add>
+			<search position="after"><![CDATA[$this->data['text_openbay_order_import'] = $this->language->get('text_openbay_order_import');]]></search>
+			<add><![CDATA[		$this->data['text_ocsendyintegration'] = $this->language->get('text_ocsendyintegration');]]></add>
 		</operation>
 		<operation>
-			<search position="after"><![CDATA[$this->data['backup'] = $this->url->link('tool/backup', 'token=' . $this->session->data['token'], 'SSL');]]></search>
-			<add><![CDATA[			$this->data['ocstocksync'] = $this->url->link('extension/ocstocksync', 'token=' . $this->session->data['token'], 'SSL');]]></add>
+			<search position="after"><![CDATA[$this->data['zone'] = $this->url->link('localisation/zone', 'token=' . $this->session->data['token'], 'SSL');]]></search>
+			<add><![CDATA[			$this->data['ocsendyintegration'] = $this->url->link('extension/ocsendyintegration', 'token=' . $this->session->data['token'], 'SSL');]]></add>
 		</operation>
 	</file>
 	<file name="admin/language/english/common/header.php">
 		<operation>
 			<search position="after"><![CDATA[$_['text_backup']]]></search>
-			<add><![CDATA[$_['text_ocstocksync']           = 'Open Cart Stock Sync';]]></add>
+			<add><![CDATA[$_['text_ocsendyintegration']           = 'Open Cart Sendy Integration';]]></add>
 		</operation>
 	</file>
 	<file name="admin/view/template/common/header.tpl">
 		<operation>
-			<search position="after"><![CDATA[<li><a href="<?php echo $information; ?>"><?php echo $text_information; ?></a></li>]]></search>
-			<add><![CDATA[        <li><a href="<?php echo $ocstocksync; ?>"><?php echo $text_ocstocksync; ?></a></li>]]></add>
+			<search position="after"><![CDATA[<li><a href="<?php echo $feed; ?>"><?php echo $text_feed; ?></a></li>]]></search>
+			<add><![CDATA[        <li><a href="<?php echo $ocsendyintegration; ?>"><?php echo $text_ocsendyintegration; ?></a></li>]]></add>
 		</operation>
 	</file>
 </modification>
