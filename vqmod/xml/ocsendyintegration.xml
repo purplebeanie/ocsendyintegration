@@ -1,0 +1,28 @@
+<modification>
+	<id>Open Cart Stock Synch Tool</id>
+	<version>1.5.x</version>
+	<vqmver>2.4.0</vqmver>
+	<author>Eric Fernance</author>
+	<file name="admin/controller/common/header.php">
+		<operation>
+			<search position="after"><![CDATA[$this->data['text_backup'] = $this->language->get('text_backup');]]></search>
+			<add><![CDATA[		$this->data['text_ocstocksync'] = $this->language->get('text_ocstocksync');]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$this->data['backup'] = $this->url->link('tool/backup', 'token=' . $this->session->data['token'], 'SSL');]]></search>
+			<add><![CDATA[			$this->data['ocstocksync'] = $this->url->link('extension/ocstocksync', 'token=' . $this->session->data['token'], 'SSL');]]></add>
+		</operation>
+	</file>
+	<file name="admin/language/english/common/header.php">
+		<operation>
+			<search position="after"><![CDATA[$_['text_backup']]]></search>
+			<add><![CDATA[$_['text_ocstocksync']           = 'Open Cart Stock Sync';]]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/common/header.tpl">
+		<operation>
+			<search position="after"><![CDATA[<li><a href="<?php echo $information; ?>"><?php echo $text_information; ?></a></li>]]></search>
+			<add><![CDATA[        <li><a href="<?php echo $ocstocksync; ?>"><?php echo $text_ocstocksync; ?></a></li>]]></add>
+		</operation>
+	</file>
+</modification>
